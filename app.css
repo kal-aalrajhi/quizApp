@@ -4,6 +4,7 @@
 #edf6f9
 #ffddd2
 #e29578
+#333333
 */
 /* FRAMING */
 :root { 
@@ -17,7 +18,7 @@
     margin: 0;
     padding: 0;
     color: #333333;
-    border: 0.2rem solid red;
+    /* border: 0.2rem solid red; */
 }
 
 h1,
@@ -105,4 +106,31 @@ main > * { /* make all children have a width of the whole container */
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
+}
+
+/* MAIN GAME */
+.choice-container {
+    display: flex;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid #006d77;
+    margin-bottom: 0.5rem;
+    background-color: white;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.2rem 0 #006d77;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.choice-prefix {
+    padding: 1.5rem 2.5rem;
+    background-color: #006d77;
+    color: white;
+}
+
+.choice-text {
+    padding: 1.5rem;
 }
