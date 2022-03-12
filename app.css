@@ -1,0 +1,108 @@
+/* COLORS
+#006d77
+#83c5be
+#edf6f9
+#ffddd2
+#e29578
+*/
+/* FRAMING */
+:root { 
+    background-color: #edf6f9;
+    font-size: 10px; /* now all our fonts will be relative to 10px by using rem - root em font size. Usual broswer default size is 16px */
+}
+
+* {
+    box-sizing: border-box; /*include border in box-sixing*/
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    border: 0.2rem solid red;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 1rem; /* (1 x 10px) = 10px*/
+}
+
+h1 {
+    font-size: 5.4rem; /* (5.4 x 10px) = 54px */
+    color: #83c5be;
+    margin-bottom: 5rem;
+}
+
+h1 > span {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+/* UTILITIES */
+main { 
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto; /* auto prevents an element from becoming bigger than its parent - centers the content in this case*/
+}
+
+main > * { /* make all children have a width of the whole container */
+    width: 100%;
+}
+
+.game-section {
+    display:flex;
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* BUTTONS */
+.button {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.1rem solid #83c5be;
+    margin-bottom: 1rem;
+    color: #83c5be;
+    background-color: white;
+}
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 #83c5be;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.button[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
